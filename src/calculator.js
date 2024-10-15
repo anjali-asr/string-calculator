@@ -1,6 +1,7 @@
 function addString(numbers) {
     if (!numbers) return 0;
-    if (numbers.length === 1) return parseInt(numbers);
+    const nums = numbers.split(/[\n,]/);
+    return nums.reduce((sum, num) => sum + parseInt(num), 0);
   }
   
   
