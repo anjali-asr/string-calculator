@@ -21,5 +21,10 @@ describe('String Calculator', () => {
   it('should handle newlines between numbers', () => {
     expect(addString("1\n2,3")).to.equal(6);
   });
+
+  it('should support custom delimiters', () => {
+    expect(addString("//;\n1;2")).to.equal(3);
+  });
+  
 });
 
